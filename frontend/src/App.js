@@ -6,12 +6,16 @@ import Cart from "./pages/cart/Cart.jsx"
 import MenuPage from "./pages/menuPage/MeniuPage.jsx"
 import OrderTracking from "./pages/orderTracking/OrderTracking.jsx"
 import LoginRegister from "./pages/loginRegister/LoginRegister"
+import { useState } from "react"
 
 const App = () =>
 {
+
+  const [user, setUser] = useState(null)
+
   return (
     <div>
-      <Navbar />
+      <Navbar user={user} />
 
       <Routes>
         <Route path="/" element={<Home />} />
