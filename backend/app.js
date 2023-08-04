@@ -6,6 +6,7 @@ const cors = require("cors")
 const middleware = require("./utils/middleware.js")
 const controllerUser = require("./controllers/controllerUser.js")
 const controllerLogin = require("./controllers/controllerLogin.js")
+const controllerMenu = require("./controllers/controllerMeniu.js")
 
 const app = express()
 
@@ -19,6 +20,7 @@ app.use(middleware.tokenExtractor)
 
 app.use("/api/users", controllerUser)
 app.use("/api/login", middleware.tokenExtractor, controllerLogin)
+app.use("/api/menu", controllerMenu)
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
