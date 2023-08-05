@@ -20,7 +20,7 @@ app.use(middleware.tokenExtractor)
 
 app.use("/api/users", controllerUser)
 app.use("/api/login", middleware.tokenExtractor, controllerLogin)
-app.use("/api/menu", controllerMenu)
+app.use("/api/menu", middleware.tokenExtractor, controllerMenu)
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
