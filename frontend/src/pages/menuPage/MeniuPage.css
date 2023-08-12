@@ -1,0 +1,75 @@
+/* MenuPage.css */
+
+.menu-page {
+  padding: 2rem;
+  background-image: url("../../../public/images/woodenTable.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.category-dropdown {
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Add background color with transparency */
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.category-dropdown label {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.category-dropdown select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}
+
+.menu-item {
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+  max-width: 100%;
+  height: 300px; /* Set a fixed height for consistent dimensions */
+  object-fit: cover; /* Maintain aspect ratio while covering the area */
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu-item button:hover {
+  background-color: var(--primary-dark-color);
+}
