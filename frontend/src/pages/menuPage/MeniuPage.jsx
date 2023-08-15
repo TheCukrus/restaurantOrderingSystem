@@ -32,6 +32,7 @@ const MenuPage = () =>
     {
       //If item is already in the cart, update its quantity
       addToCart({ ...item, quantity: existingCartItem.quantity + 1 })
+      addNotification(`Add ${item.title} to the cart`, "success")
     }
     else
     {
