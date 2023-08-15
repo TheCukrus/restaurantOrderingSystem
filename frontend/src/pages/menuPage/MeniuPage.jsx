@@ -38,6 +38,7 @@ const MenuPage = () =>
     {
       //If item is not in the cart, add it with quantity
       addToCart({ ...item, quantity: 1 })
+      addNotification(`Add ${item.title} to the cart`, "success")
     }
   }
 
