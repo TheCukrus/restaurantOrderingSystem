@@ -9,7 +9,8 @@
 
 .category-dropdown {
   margin-bottom: 1rem;
-  background-color: rgba(255, 255, 255, 0.8); /* Add background color with transparency */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Add background color with transparency */
   padding: 0.5rem;
   border-radius: 4px;
 }
@@ -39,12 +40,33 @@
   padding: 1rem;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  /* Start with zero opacity */
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    /* Start with zero opacity */
+    transform: translateY(20px);
+    /* Move element down by 20px */
+  }
+
+  to {
+    opacity: 1;
+    /* End with full opacity */
+    transform: translateY(0);
+    /* Move element back to its original position */
+  }
 }
 
 .menu-item img {
   max-width: 100%;
-  height: 300px; /* Set a fixed height for consistent dimensions */
-  object-fit: cover; /* Maintain aspect ratio while covering the area */
+  height: 300px;
+  /* Set a fixed height for consistent dimensions */
+  object-fit: cover;
+  /* Maintain aspect ratio while covering the area */
   border-radius: 4px;
   margin-bottom: 0.5rem;
 }
