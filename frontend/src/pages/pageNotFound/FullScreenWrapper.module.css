@@ -1,0 +1,12 @@
+/* FullScreenWrapper.module.css */
+.fullScreenWrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../public/images/pageNotFound.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
