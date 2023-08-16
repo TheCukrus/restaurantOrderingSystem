@@ -36,7 +36,8 @@ const Login = () =>
             cartService.setAuthorizationToken(`Bearer ${login.token}`)
 
             homeNav("/")
-            return addNotification(`Welcome back ${login.username}`, "success")
+            addNotification(`Welcome back ${login.username}`, "success")
+            return
         }
         catch (err)
         {
