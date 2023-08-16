@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react"
 import service from "../services/user.js"
+import jwt_decode from "jwt-decode"
 
 const UserContext = createContext()
 
@@ -33,14 +34,32 @@ export const UserProvider = ({ children }) =>
     useEffect(() =>
     {
         const token = window.localStorage.getItem("token")
-        setUser(token)
+        if (token)
+        {
+            const decodedToken = jwt_decode(token)
+            const expirationTime = decodedToken.exp * 1000
+
+            if (expirationTime < Date.now())
+            {
+                window.localStorage.removeItem("token")
+                setUser(null)
+            }
+            else
+            {
+                setUser(token)
+            }
+        }
     }, [])
 
     //Checking for admin rights
     useEffect(() =>
     {
+        if (!user)
+        {
+            return
+        }
         checkAdminRights()
-    },[user])
+    }, [user])
 
     // console.log(adminRights)
     // console.log(JSON.parse(user))
