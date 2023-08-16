@@ -19,7 +19,9 @@ const Checkout = () =>
             await orderService.updateOrder({ order: cartItems })
             homeNav("/")
             clearCart()
-            return addNotification("Order places successfull","success")
+            return addNotification("Order places successfull", "success")
+            //Add in future
+            //Sendng via email order information and irder Id
         }
         catch (err)
         {
