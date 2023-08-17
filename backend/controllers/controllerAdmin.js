@@ -1,4 +1,3 @@
-const jwt = require("jsonwebtoken")
 const express = require("express")
 const logger = require("../utils/logger.js")
 const modelUser = require("../models/modelUser.js")
@@ -9,7 +8,7 @@ controllerAdmin.get("/", async (req, res) =>
 {
     try
     {
-        if (!req.token.id)
+        if (!req.token?.id)
         {
             return res.status(401).json({ message: "Not authorized" })
         }
@@ -18,7 +17,7 @@ controllerAdmin.get("/", async (req, res) =>
 
         if (userRole.role !== "admin")
         {
-            return res.status(403).json({ message: "Have no access" })
+            return logger.info({ message: "Have no access" })
         }
 
 
