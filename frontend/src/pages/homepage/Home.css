@@ -1,0 +1,40 @@
+.home-container .home-h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    color: white;
+    background-color: #ff8c00;
+    padding: 0.5rem;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1rem;
+
+    text-align: center;
+    padding: 1.4rem 0;
+
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.testimonial {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.pagination-container .pagination .page-item.active .page-link {
+    background-color: #ff8c00;
+    border-color: #ff8c00;
+}
