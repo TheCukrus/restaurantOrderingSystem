@@ -4,6 +4,7 @@ import services from "../../services/user.js"
 import { useNavigate } from "react-router-dom"
 import { useUserContext } from "../../contexts/UserContext.js"
 import cartService from "../../services/cart.js"
+import orderService from "../../services/orderHistory.js"
 import { useNotificationContext } from "../../contexts/NotificationContext.js"
 
 const Login = () =>
@@ -34,7 +35,8 @@ const Login = () =>
 
             //Update the service's config object with the new token
             cartService.setAuthorizationToken(`Bearer ${login.token}`)
-
+            orderService.setAuthorizationToken(`Bearer ${login.token}`)
+            services.setAuthorizationToken(`Bearer ${login.token}`)
             homeNav("/")
             addNotification(`Welcome back ${login.username}`, "success")
             return
