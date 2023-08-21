@@ -24,7 +24,7 @@ export function MenuProvider({ children })
     }, [])
 
     return (
-        <MenuContext.Provider value={{ menu, setMenu, selectedCategory, setSelectedCategory, categories }}>
+        <MenuContext.Provider value={{ menu, setMenu, selectedCategory, setSelectedCategory, categories, fetchData }}>
             {children}
         </MenuContext.Provider>
     )
