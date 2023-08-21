@@ -65,7 +65,7 @@ export const UserProvider = ({ children }) =>
     // console.log(JSON.parse(user))
 
     return (
-        <UserContext.Provider value={{ user, setUser, adminRights }}>
+        <UserContext.Provider value={{ user, setUser, adminRights, setAdminRights }}>
             {children}
         </UserContext.Provider>
     )
