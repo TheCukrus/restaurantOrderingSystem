@@ -22,9 +22,9 @@ mongoose.connect(config.MONGODB)
     .then(() => logger.info("Connect to mongoDB"))
     .catch((error) => logger.error("Error connecting to mongoDB", error.message))
 
-app.use(express.static(frontendBuildPath))
 app.use(cors())
 app.use(express.json())
+app.use(express.static(frontendBuildPath))
 app.use(middleware.tokenExtractor)
 
 app.use("/api/users", controllerUser)
