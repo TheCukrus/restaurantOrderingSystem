@@ -62,4 +62,71 @@ controllerMenu.post("/", async (req, res) =>
     }
 })
 
+controllerMenu.put("/:id", async (req, res) =>
+{
+    try
+    {
+        const { id } = req.params
+        const { title, category, description, price, imagePath } = req.body
+
+        if (!req.token.id)
+        {
+            res.status(401).json({ message: "Token invalid" })
+        }
+
+        const role = await modelUser.findById(req.token.id)
+
+        if (role.role !== "admin")
+        {
+            return res.status(401).json({ message: "You have no access" })
+        }
+
+        if (!title || !category || !description || !price || !imagePath)
+        {
+            return res.status(400).json({ message: "All fields are required" })
+        }
+
+        const updateData = { title, category, description, price, imagePath }
+
+        await modelMenu.findByIdAndUpdate(id, updateData)
+
+        res.status(200).json({ message: `Dish ${title} updated` })
+    }
+    catch (err)
+    {
+        logger.error(err)
+        res.status(500).json({ message: "Internal server error" })
+    }
+
+})
+
+controllerMenu.delete("/:id", async (req, res) =>
+{
+    try
+    {
+        const { id } = req.params
+
+        if (!req.token.id)
+        {
+            return res.status(401).json({ message: "Token invalid" })
+        }
+
+        const role = await modelUser.findById(req.token.id)
+
+        if (role.role !== "admin")
+        {
+            return res.status(401).json({ message: "You have no access" })
+        }
+
+        const removeDish = await modelMenu.findByIdAndDelete(id)
+
+        res.status(200).json({ message: "Dish removed" })
+    }
+    catch (err)
+    {
+        logger.error(err)
+        res.status(500).json({ message: "Internal server error" })
+    }
+})
+
 module.exports = controllerMenu
