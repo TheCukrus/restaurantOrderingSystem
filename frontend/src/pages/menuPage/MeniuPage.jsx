@@ -61,7 +61,7 @@ const MenuPage = () =>
             <img src={item.imagePath} alt={item.name} />
             <h3>{item.name}</h3>
             <p>{item.description}</p>
-            <p>Price: ${item.price.toFixed(2)}</p>
+            <p>Price: ${item.price}</p>
             <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
           </div>
         ))}
