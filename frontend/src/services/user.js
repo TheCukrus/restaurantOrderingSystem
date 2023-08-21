@@ -1,6 +1,15 @@
 import axios from "axios"
 
-const baseUrl = "http://127.0.0.1:80/api/"
+let baseUrl
+
+if (process.env.NODE_ENV === "development")
+{
+    baseUrl = "http://127.0.0.1:80/api/"
+}
+else
+{
+    baseUrl = "https://restaurantordersystem.onrender.com/api/"
+}
 
 const getToken = () =>
 {
