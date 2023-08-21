@@ -1,0 +1,8 @@
+.main-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+
+    /* new small viewport height for modern browsers */
+    min-height: 100vh;
+}
