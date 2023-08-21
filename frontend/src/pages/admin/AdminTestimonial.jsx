@@ -36,6 +36,7 @@ const AdminTestimonial = () =>
                     <Form.Group>
                         <Form.Label>Name:</Form.Label>
                         <Form.Control
+                            name="name"
                             type="text"
                             value={testimonialData.name}
                             onChange={(e) => setTestimonialData({ ...testimonialData, name: e.target.value })}
@@ -45,8 +46,9 @@ const AdminTestimonial = () =>
                     <Form.Group>
                         <Form.Label>Content:</Form.Label>
                         <Form.Control
-                            as="textarea"  // Specify the component type
-                            rows={4}        // Specify the number of rows
+                            name="content"
+                            as="textarea"
+                            rows={4}
                             value={testimonialData.content}
                             onChange={(e) => setTestimonialData({ ...testimonialData, content: e.target.value })}
                         />
