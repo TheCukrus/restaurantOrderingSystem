@@ -6,6 +6,7 @@ import { useUserContext } from "../../contexts/UserContext.js"
 import cartService from "../../services/cart.js"
 import orderService from "../../services/orderHistory.js"
 import { useNotificationContext } from "../../contexts/NotificationContext.js"
+import contactService from "../../services/contact.js"
 
 const Login = () =>
 {
@@ -37,6 +38,7 @@ const Login = () =>
             cartService.setAuthorizationToken(`Bearer ${login.token}`)
             orderService.setAuthorizationToken(`Bearer ${login.token}`)
             services.setAuthorizationToken(`Bearer ${login.token}`)
+            contactService.setAuthorizationToken(`Bearer ${login.token}`)
             homeNav("/")
             addNotification(`Welcome back ${login.username}`, "success")
             return
