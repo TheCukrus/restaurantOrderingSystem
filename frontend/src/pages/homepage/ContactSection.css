@@ -1,76 +1,50 @@
 .contact-form {
-    margin: 2rem 5rem 2rem;
-    padding: 2rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem; /* Padding to match the testimonial cards */
+    border: none; /* Removing border for a cleaner look */
+    max-width: 800px; /* Aligns with the width of the testimonials */
+    margin: 2rem auto; /* Consistent vertical spacing */
+    padding: 1.5rem; /* Slightly less padding to match testimonials */
+    background-color: #fff; /* Matching white background */
+    border-radius: 10px; /* Same border-radius for consistency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Same shadow as testimonials for consistency */
+    text-align: left; /* Text alignment to match testimonials */
+
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 5px 0;
-    background-color: #fff;
-    transition: border-color 0.3s ease-in-out;
+    padding: 0.75rem; /* Comfortable padding for typing */
+    border: 1px solid #ddd; /* Lighter border for a subtle look */
+    border-radius: 5px; /* Softly rounded corners for the inputs */
+    margin-bottom: 1rem; /* Space between each form field */
+    background-color: #fff; /* White background to match the section background */
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #ff8c00;
-    outline: none;
+    border-color: var(--primary-color); /* Highlight color for focus */
+    box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25); /* Subtle glow effect for focus */
 }
 
 .contact-form button {
-    padding: 0.5rem 1rem;
-    background-color: #ff8c00;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    padding: 0.75rem 1.5rem; /* Sufficient padding for button */
+    background: var(--button-gradient); /* Primary button color */
+    color: #fff; /* Text color for readability */
+    border: none; /* No border for a clean button look */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Cursor to indicate button interactivity */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
 .contact-form button:hover {
-    background-color: #ff9900;
-}
-
-.contact-section-title {
-    background-color: #ff8c00;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: 1rem;
-    text-align: center;
-    padding: 1.5rem 0;
-}
-
-.contact-section-title h2 {
-    color: #fff;
-    margin: 0;
+    background: var(--button-hover-gradient); /* Darker shade for hover state, adjust the color to match your primary color */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .contact-form {
-        margin: 2rem auto;
-        padding: 2rem;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        background-color: #f9f9f9;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-}
-
-@media (min-width: 1200px) {
-    .contact-form {
-        margin: 2rem 20rem 2rem;
-        padding: 2rem;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        background-color: #f9f9f9;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    .contact-content {
+        margin: 1rem;
+        padding: 1rem;
     }
 }
