@@ -17,7 +17,7 @@ const ContactSection = () =>
             await contactService.createMessage(mail)
 
             setIsMessageSent(true);
-            setMail({ name: "", email: "", massage: "" })
+            setMail({ name: "", email: "", message: "" })
         }
         catch (err)
         {
@@ -27,10 +27,7 @@ const ContactSection = () =>
 
     return (
 
-        <div className="contact-content">
-            <div className="contact-section-title">
-                <h2>Contact Us</h2>
-            </div>
+        <div >
             <div className="contact-form">
                 {isMessageSent ? (
                     <Alert variant="success">Thank you for your message!</Alert>
