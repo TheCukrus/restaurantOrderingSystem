@@ -1,17 +1,15 @@
-.home-container .home-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-
-    color: white;
-    background-color: #ff8c00;
-    padding: 0.5rem;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: 1rem;
-
+.home-h2 {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: var(--secondary-color);
+    background: var(--navbar);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 2rem auto 1rem auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 1.4rem 0;
-
 }
+
 
 .pagination-container {
     display: flex;
@@ -35,6 +33,6 @@
 }
 
 .pagination-container .pagination .page-item.active .page-link {
-    background-color: #ff8c00;
-    border-color: #ff8c00;
+    background: var(--primary-gradient);
+    border: var(--primary-gradient);
 }
