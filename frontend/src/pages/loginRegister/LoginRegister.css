@@ -1,21 +1,12 @@
-/* LoginRegister.css */
-:root {
-  --primary-color: #ff8c00;
-  --primary-dark-color: #ff9900;
-  --background-color: #f4f4f4;
-  --text-color: #333;
-}
-
-
 .login-register {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   background-image: url("../../../public/images/loginBackground.jpg");
-  background-size: cover; /* Adjust as needed */
+  background-size: cover; 
   background-repeat: no-repeat;
-
+color:var(--neutral-dark)
 }
 
 .form-container {
@@ -52,7 +43,7 @@
 .button {
   padding: 1rem;
   font-size: 1rem;
-  background-color: var(--primary-color);
+  background: var(--button-gradient);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -61,7 +52,7 @@
 }
 
 .button:hover {
-  background-color: var(--primary-dark-color);
+  background: var(--button-hover-gradient);
 }
 
 /* Responsive Styles */
