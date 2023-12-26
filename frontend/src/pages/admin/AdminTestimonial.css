@@ -2,17 +2,18 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color:var(--neutral-dark)
 }
 
 .admin-testimonial-container h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     color: white;
-    background-color: #ff8c00;
+    background: var(--primary-gradient);
     padding: 1rem;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     text-align: center;
-
+    font-weight: bold;
 }
 
 .admin-testimonial-form-container {
@@ -43,7 +44,7 @@
 
 .submit-button {
     display: block;
-    background-color: #ff8c00;
+    background: var(--button-gradient);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -54,7 +55,7 @@
 }
 
 .submit-button:hover {
-    background-color: #ff9900;
+    background: var(--button-hover-gradient);
 }
 
 /* Responsive Styling */
