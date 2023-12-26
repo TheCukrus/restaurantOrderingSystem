@@ -9,8 +9,6 @@ const AdminPage = () =>
 
     return (
         <div className="admin-page">
-            <h1>Admin Page</h1>
-            {/* Component for creating a new dish */}
             <NewDishForm />
 
             {/* Component for listing all dishes */}
