@@ -10,9 +10,10 @@
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     color: white;
-    background-color: #ff8c00;
+    background: var(--primary-gradient);
     padding: 1rem;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -45,7 +46,7 @@
 .saveBtn {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    background-color: #ff8c00;
+    background: var(--button-gradient);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -54,13 +55,13 @@
 }
 
 .saveBtn:hover {
-    background-color: #ff9900;
+    background: var(--button-hover-gradient);
 }
 
 .removeBtn {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    background-color: #e44444;
+    background: var(--button-remove);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -69,7 +70,7 @@
 }
 
 .removeBtn:hover {
-    background-color: #d14141;
+    background: var(--button-hover-remove);
 }
 
 .table-responsive {
