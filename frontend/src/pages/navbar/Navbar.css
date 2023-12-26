@@ -2,84 +2,77 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ff8c00;
-  /* Set your primary color here */
+  background: var(--navbar);
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-logo img {
-  width: 80px;
-  /* Adjust the logo size as needed */
-  height: auto;
-  margin: auto 5px;
+.navbar-logo-img {
+  height: 60px;
 }
 
-.navbar-links {
-  list-style: none;
+.navbar-menu {
   display: flex;
   align-items: center;
 }
 
-.navbar-links li {
-  margin-right: 2rem;
-}
-
-.navbar-links a {
+.navbar-link {
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  margin: 0 10px;
   text-decoration: none;
-  color: #fff;
-  /* Set your text color for links */
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s;
 }
 
-.navbar-links a:hover {
-  color: #ff9900;
-  /* Set your hover color for links */
+.navbar-link:hover,
+.navbar-link:focus {
+  color: var(--neutral-dark); /* Highlight color for interaction */
 }
 
 .navbar-toggler {
   display: none;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M4 7h22v3H4zM4 14h22v3H4zM4 21h22v3H4z"/></svg>');
+}
+
+/* Active state styling for the dropdown menu */
+.navbar-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ff8c00;
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    /* Hide the main links */
-    flex-direction: column;
-    background-color: #ff8c00;
-    /* Replace with your desired background color */
-    padding: 1rem;
-    position: absolute;
-    top: 85px;
-    /* Adjust as needed */
-    left: 0;
-    width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  .navbar-links.show {
-    display: flex;
-    /* Show the links when the dropdown is toggled */
-  }
-
-  .navbar-links li {
-    margin-bottom: 1rem;
-  }
-
+@media (max-width: 768px) {
   .navbar-toggler {
     display: block;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    /* Adjust as needed */
-    right: 20px;
-    /* Adjust as needed */
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-link {
+    display: block;
+    text-align: center;
+    width: 100%;
   }
 }
