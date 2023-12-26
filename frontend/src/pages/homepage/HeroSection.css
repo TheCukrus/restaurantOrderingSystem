@@ -1,65 +1,131 @@
 .hero-section {
   position: relative;
+  width: 100%;
+  display: flex;
+  max-height: 87vh;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-
-  background-color: rgba(0, 0, 0, 0.125);
-  padding: 1rem;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
-
-.explore-menu-btn {
-  padding: 12px 20px;
-  font-size: 1rem;
-  background-color: #ff8c00;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-.explore-menu-btn:hover {
-  background-color: #ff9900;
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
-/*responsive design*/
-@media (max-width: 768px) {
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1; 
+}
 
+.hero-content {
+  position: absolute;
+  color: var(--primary-gradient);
+  z-index: 2; 
+  padding: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.explore-menu-btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-image: var(--button-gradient); /* Use gradient for buttons */
+  color: var(--text-color); /* Text color for buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s; /* Transition for background, not background-color */
+  text-decoration: none;
+}
+
+.explore-menu-btn:hover,
+.explore-menu-btn:focus {
+  background: var(--button-hover-gradient); /* Gradient change on hover */
+  color: var(--text-color); /* Ensure text is readable on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content h1,
+.hero-content p,
+.explore-menu-btn {
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.hero-content h1 {
+  animation-name: fadeInUp;
+  animation-delay: 0.3s;
+}
+
+.hero-content p {
+  animation-name: fadeInUp;
+  animation-delay: 0.5s;
+}
+
+.explore-menu-btn {
+  animation-name: fadeIn;
+  animation-delay: 0.7s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .hero-content p {
     font-size: 1rem;
-    margin: 10px 0;
-    display: none
   }
 
   .explore-menu-btn {
-    font-size: 0.8rem;
-    margin-top: 30px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .hero-content h1{
+    font-size: 1.5rem;
+  }
+
+  .hero-content p{
+    font-size: 1rem;
   }
 }
