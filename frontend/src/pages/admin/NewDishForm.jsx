@@ -37,7 +37,7 @@ const NewDishForm = () =>
 
     return (
         <div className="new-dish-container">
-            <h2>New Dish</h2>
+            <h2>Create New Dish</h2>
 
             <div className="new-dish-form">
                 <Form onSubmit={handleCreateDish}>
