@@ -49,10 +49,11 @@ const Home = () =>
     return (
         <div className="home-container">
             <HeroSection />
+
+            <h2 className="home-h2">Most Popular Dishes</h2>
             <Carousel />
 
             <h2 className="home-h2">Best reviews</h2>
-
             {visibleTestimonials.map((ele, index) => (
                 <Testimonial
                     key={ele.name}
@@ -77,6 +78,7 @@ const Home = () =>
                 </Pagination>
             </div>
 
+            <h2 className="home-h2">Contact Us</h2>
             <ContactSection />
         </div>
     )
