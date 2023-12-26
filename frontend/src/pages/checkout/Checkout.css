@@ -5,6 +5,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: solid black 1px;
   margin: auto;
+  color: var(--neutral-dark)
 }
 
 .checkout-heading {
@@ -65,7 +66,7 @@
 .checkout-btn {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: #ff8c00;
+  background: var(--button-gradient);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -75,5 +76,5 @@
 }
 
 .checkout-btn:hover {
-  background-color: #ff9900;
+  background: var(--button-hover-gradient);
 }
