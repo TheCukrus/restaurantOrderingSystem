@@ -2,7 +2,7 @@
     background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top:0.5rem;
+    margin-top: 0.5rem;
 }
 
 .message-table {
@@ -13,10 +13,11 @@
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     color: white;
-    background-color: #ff8c00;
+    background: var(--primary-gradient);
     padding: 1rem;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     text-align: center;
+    font-weight: bold;
 }
 
 .mark-as-read,
@@ -31,12 +32,12 @@
 }
 
 .mark-as-read {
-    background-color: #ff8c00;
+    background: var(--button-gradient);
     color: #fff;
 }
 
 .mark-as-read:hover {
-    background-color: #ff9900;
+    background: var(--button-hover-gradient);
     transform: scale(1.05);
 }
 
