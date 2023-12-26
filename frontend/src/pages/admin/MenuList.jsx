@@ -1,5 +1,5 @@
 import s from "./MenuList.module.css"
-import { Table } from "react-bootstrap"
+import { Table, Form } from "react-bootstrap"
 import { useMenuContext } from "../../contexts/MenuContext.js"
 import { useNotificationContext } from "../../contexts/NotificationContext"
 import menuService from "../../services/menu.js"
@@ -76,7 +76,7 @@ const MenuList = () =>
                                 </td>
 
                                 <td>
-                                    <input
+                                    <Form.Control
                                         name="dish-title"
                                         type="text"
                                         value={dish.title}
@@ -92,7 +92,8 @@ const MenuList = () =>
                                     />
                                 </td>
                                 <td>
-                                    <textarea
+                                    <Form.Control
+                                        as="textarea"
                                         name="dish-description"
                                         type="text"
                                         value={dish.description}
@@ -109,7 +110,7 @@ const MenuList = () =>
                                 </td>
 
                                 <td>
-                                    <input
+                                    <Form.Control
                                         name="dish-price"
                                         type="number"
                                         value={dish.price}
@@ -126,7 +127,7 @@ const MenuList = () =>
                                     />
                                 </td>
                                 <td>
-                                    <input
+                                    <Form.Control
                                         name="dish-imagePath"
                                         type="text"
                                         value={dish.imagePath}
